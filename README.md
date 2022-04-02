@@ -4,6 +4,6 @@ BruteForcer is a CLI Utility and API to brute force byte sequencies.  In theory 
 ## Build
 ```gradle clean build```
 ## Run
-To brute force the byte sequence ```{13, 19, -126}```<br>
+To brute force the byte sequence ```{13, 19, -126}```:<br>
 ```java -jar build/libs/BruteForcer-0.0.1.jar 13 19 -126```
 
