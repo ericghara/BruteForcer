@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.ericghara'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.ericghara.BruteForcer', // jar entry point
+                'Class-Path': configurations.runtimeClasspath.files.collect { 'lib/' + it.getName() }.join(' ')
+        // specifies libraries are stored in lib/ folder
+    }
+}
+
+application {
+    mainClass.set('org.ericghara.BruteForcer')
+}
+
+test {
+    useJUnitPlatform()
+}
