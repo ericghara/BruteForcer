@@ -25,5 +25,4 @@ abstract class BruteByte {
     }
 
     abstract void next() throws NullPointerException, NoMorePermutationsException;
-
 }

@@ -12,6 +12,4 @@ class NormalByte extends BruteByte {
             nextByte.next();
         }
     }
-
-
 }
